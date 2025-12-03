@@ -1,0 +1,401 @@
+body {
+  background-color: #eee;
+}
+main {
+  margin-left: 115px;
+  margin-top: 10px;
+  padding: 20px;
+  background: #eee;
+  min-height: calc(100vh - 60px);
+}
+/* USE */
+
+.table-section {
+  background: #ddd;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 20px 24px;
+  margin-top: 80px;
+}
+
+.table-header {
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.table-header h3 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  border-left: 4px solid #4caf50;
+  padding-left: 10px;
+}
+
+.btn-show {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #b8b8b8;
+  background: #b8b8b8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-show p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.btn-show select {
+  padding: 4px 8px;
+  background: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.user-table thead {
+  background: #f3f4f6;
+  color: #333;
+}
+
+.user-table th {
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
+}
+
+.user-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+.user-table td:last-child {
+  border-right: none;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f9fefb;
+  transition: 0.25s;
+}
+
+.status {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.status-active {
+  display: inline-block;
+  background: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.status-locked {
+  display: inline-block;
+  background: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.btn-add {
+  background: rgba(19, 15, 241, 0.15);
+  color: #380ff1;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: block;
+  margin-top: 5px;
+  float: right;
+}
+
+.btn-edit {
+  background: rgba(241, 226, 15, 0.15);
+  color: #edf10f;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 3px;
+}
+
+.btn-delete {
+  background: rgba(241, 15, 15, 0.15);
+  color: #f10f0f;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 3px;
+}
+
+.pagination {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination .page-item .page-link {
+  display: block;
+  padding: 6px 12px;
+  border: 1px solid #dee2e6;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+/*................. add.php of product .................*/
+.form-container {
+  margin-top: 20px;
+}
+
+.user-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #f3f4f6;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+}
+
+.avatar-upload {
+  grid-column: 1 / -1;
+}
+
+.avatar-upload input[type="file"] {
+  padding: 6px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background: #f3f4f6;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  justify-content: flex-start;
+}
+
+.btn-save {
+  background: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-save:hover {
+  background: rgba(46, 204, 113, 0.25);
+}
+
+.btn-cancel {
+  background: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.btn-view {
+  background: rgba(193, 183, 183, 0.149);
+  color: #c1b7b7;
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 3px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.btn-cancel:hover {
+  background: rgba(231, 76, 60, 0.25);
+}
+
+.btn-add-product,
+.btn-add-user {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: block;
+  margin-top: 5px;
+  float: right;
+}
+
+/*................. add.php of user .................*/
+.form-container {
+  padding: 10px 5px;
+}
+
+.user-form-use div[class^="form-group"] {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.user-form-use label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.user-form-use input,
+.user-form-use select {
+  padding: 10px 12px;
+  border: 1px solid #b8b8b8;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  transition: 0.2s;
+}
+
+.user-form-use input:focus,
+.user-form-use select:focus {
+  border-color: #380ff1;
+  box-shadow: 0 0 6px rgba(56, 15, 241, 0.25);
+  outline: none;
+}
+/* Thông báo add user thành công */
+.alert {
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.alert-error {
+  background: rgba(241, 15, 15, 0.15);
+  color: #f10f0f;
+}
+
+.alert-success {
+  background: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+}
+
+/*................. view.php of pdoduct .................*/
+
+.view-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;
+  padding: 10px 5px;
+}
+
+.view-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.view-item label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.view-item .value {
+  padding: 10px 12px;
+  background: #f3f4f6;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #555;
+}
+
+.view-image {
+  grid-column: 1 / -1;
+}
+
+.btn-back {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: rgba(193, 183, 183, 0.25);
+  color: #333;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.btn-back:hover {
+  background: rgba(193, 183, 183, 0.35);
+}

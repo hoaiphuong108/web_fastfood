@@ -1,0 +1,101 @@
+body {
+  background-color: #f8fafc;
+}
+.header {
+  top: 0;
+  left: 230px;
+  right: 0;
+  height: 60px;
+  z-index: 1040;
+}
+
+.header-main {
+  background-color: #1e1e1e;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 230px;
+  right: 0;
+  height: 60px;
+  z-index: 1040;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid #343a40;
+}
+
+.dropdown-header .btn {
+  background: #2b3035;
+  color: #fff;
+}
+
+.dropdown-header .btn:hover {
+  background: #343a40;
+  color: #fff;
+}
+.dropdown-header {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-header button {
+  display: flex;
+  align-items: center;
+  background: #2d3436;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dropdown-header button i {
+  margin-right: 6px;
+}
+
+.dropdown-menu-header {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  min-width: 180px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 1000;
+}
+
+.dropdown-menu-header.show {
+  display: block;
+}
+
+.dropdown-menu-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu-header ul li a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #121212;
+  font-size: 0.85rem;
+}
+.dropdown-menu-header ul li a:hover {
+  color: #ddd;
+}
+.dropdown-menu-header ul li a.text-danger {
+  color: #e74c3c;
+}
+
+/* Khi màn hình nhỏ, header tự full chiều ngang */
+@media (max-width: 768px) {
+  .header-main {
+    width: 100%;
+    left: 0;
+    transition: left 0.3s ease, width 0.3s ease;
+  }
+}

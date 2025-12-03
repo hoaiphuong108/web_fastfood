@@ -1,0 +1,58 @@
+/* Base status */
+.status,
+.delivery {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* Trạng thái đơn hàng */
+.status-choxacnhan {
+  background: rgba(243, 156, 18, 0.15); /* cam nhạt */
+  color: #f39c12;
+}
+.status-dangchuabih {
+  background: rgba(52, 152, 219, 0.15); /* xanh dương nhạt */
+  color: #3498db;
+}
+.status-danggiao {
+  background: rgba(41, 128, 185, 0.15); /* xanh đậm nhạt */
+  color: #2980b9;
+}
+.status-hoantat {
+  background: rgba(46, 204, 113, 0.15); /* xanh lá nhạt */
+  color: #27ae60;
+}
+.status-dahuy {
+  background: rgba(231, 76, 60, 0.15); /* đỏ nhạt */
+  color: #e74c3c;
+}
+
+/* Trạng thái giao hàng */
+.delivery-chuagiao {
+  background: rgba(243, 156, 18, 0.15);
+  color: #f39c12;
+}
+.delivery-danggiao {
+  background: rgba(41, 128, 185, 0.15);
+  color: #2980b9;
+}
+.delivery-dagiao {
+  background: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+}
+.delivery-dahuy {
+  background: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+}
+
+/* Hover mượt */
+.status:hover,
+.delivery:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}

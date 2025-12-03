@@ -1,0 +1,147 @@
+body {
+  background-color: #f8fafc;
+}
+
+aside {
+  width: 230px;
+  height: 100vh;
+  position: fixed;
+}
+
+.sidebar-main {
+  width: 230px;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  color: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  transition: transform 0.3s ease;
+  z-index: 1030;
+  border-right: 1px solid #343a40;
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.sidebar-header img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.sidebar-header h2 {
+  font-size: 16px;
+  margin: 0;
+  color: #f8f9fa;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  width: 100%;
+  height: 70px;
+}
+
+.nav-link,
+.dropdown-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 22px;
+  text-decoration: none;
+  color: #adb5bd;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.nav-link:hover,
+.dropdown-toggler:hover {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.nav-icon {
+  margin-right: -3px;
+}
+
+.dropdown-menu-sidebar {
+  list-style: none;
+  padding-left: 20px;
+  background-color: #2b3035;
+}
+
+.dropdown-menu-sidebar .nav-item a {
+  display: block;
+  padding: 8px 16px;
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.dropdown-menu-sidebar .nav-item a:hover {
+  color: #fff;
+  background-color: #3c4045;
+  border-radius: 4px;
+}
+
+.collapse {
+  transition: all 0.3s ease;
+}
+
+.collapse.show .dropdown-menu-sidebar {
+  display: block !important;
+}
+
+.dropdown-toggler[aria-expanded="true"] .fa-chevron-down {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+.dropdown-toggler .fa-chevron-down {
+  transition: 0.3s;
+}
+
+/* Mặc định hiển thị bình thường trên màn hình lớn */
+.sidebar-main {
+  transform: translateX(0);
+}
+
+/* Khi màn hình nhỏ, sidebar sẽ ẩn đi */
+@media (max-width: 768px) {
+  .sidebar-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%); /* Ẩn ra ngoài khung */
+    z-index: 1050;
+    box-shadow: none;
+  }
+
+  /* Khi có class active thì hiện ra */
+  .sidebar-main.active {
+    transform: translateX(0);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Nút mở sidebar */
+  .btn-toggle-sidebar {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #3c4045;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+}

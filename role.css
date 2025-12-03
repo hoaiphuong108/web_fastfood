@@ -1,0 +1,14 @@
+body {
+  background-color: #eee;
+}
+main {
+  margin-left: 230px;
+  margin-top: 60px;
+  padding: 20px;
+  background: #eee;
+  min-height: calc(100vh - 60px);
+}
+.search-box {
+  float: right;
+  padding: 10px;
+}
